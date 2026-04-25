@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Tables - Learning</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent-gradient: linear-gradient(135deg, #8b5cf6, #ec4899);
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg-color);
+            background-image: 
+                radial-gradient(at 10% 10%, hsla(260, 50%, 15%, 1) 0px, transparent 50%),
+                radial-gradient(at 90% 90%, hsla(320, 50%, 15%, 1) 0px, transparent 50%);
+            background-attachment: fixed;
+            color: var(--text-primary);
+            padding: 60px 0;
+            min-height: 100vh;
+        }
+
+        .content-container {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 0 25px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin-bottom: 40px;
+            font-weight: 400;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #fff;
+            transform: translateX(-5px);
+        }
+
+        .page-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 50px;
+            text-align: center;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -1px;
+        }
+
+        .section-card {
+            background: rgba(30, 41, 59, 0.5);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 24px;
+            padding: 35px;
+            margin-bottom: 35px;
+            transition: all 0.3s ease;
+            text-align: left;
+        }
+
+        .section-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(236, 72, 153, 0.2);
+            background: rgba(30, 41, 59, 0.7);
+        }
+
+        h3 {
+            font-weight: 700;
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        p, li {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            font-size: 1.1rem;
+            font-weight: 300;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .code-box {
+            background: #020617;
+            padding: 25px;
+            border-radius: 16px;
+            border-left: 4px solid #8b5cf6;
+            margin: 25px 0;
+            overflow-x: auto;
+            text-align: left;
+        }
+
+        pre {
+            margin: 0;
+            color: #e2e8f0;
+            font-family: 'Fira Code', 'Courier New', monospace;
+            font-size: 1rem;
+        }
+
+        .btn-practice {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: var(--accent-gradient);
+            color: white;
+            padding: 16px 35px;
+            border-radius: 16px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            margin-top: 20px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(139, 92, 246, 0.25);
+            font-size: 1.1rem;
+        }
+
+        .btn-practice:hover {
+            transform: scale(1.02) translateY(-3px);
+            box-shadow: 0 15px 35px rgba(139, 92, 246, 0.35);
+            color: white;
+        }
+
+        .highlight {
+            color: #8b5cf6;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+
+<div class="content-container">
+    <a href="html_section.html" class="back-link">
+        <i class="fa-solid fa-arrow-left"></i> Back to Topics
+    </a>
+
+    <h1 class="page-title">HTML Tables</h1>
+
+    <div class="section-card">
+        <h3><i class="fa-solid fa-table" style="color: #8b5cf6;"></i> What is HTML Table?</h3>
+        <p>
+            <span class="highlight">HTML tables</span> allow you to arrange data into rows and columns. They are perfect for displaying structured information like schedules, reports, marksheets, and product comparisons.
+        </p>
+    </div>
+
+    <div class="section-card">
+        <h3><i class="fa-solid fa-tags" style="color: #ec4899;"></i> Key Components</h3>
+        <ul>
+            <li><span class="highlight">&lt;table&gt;</span> &mdash; The main container for the table.</li>
+            <li><span class="highlight">&lt;tr&gt;</span> &mdash; Defines a single row in the table.</li>
+            <li><span class="highlight">&lt;th&gt;</span> &mdash; Represents a header cell (bold and centered by default).</li>
+            <li><span class="highlight">&lt;td&gt;</span> &mdash; Represents standard data cells.</li>
+        </ul>
+    </div>
+
+    <div class="section-card">
+        <h3><i class="fa-solid fa-laptop-code" style="color: #8b5cf6;"></i> Example Syntax</h3>
+        <p>A simple 2-column table structure:</p>
+        <div class="code-box">
+            <pre>
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Item&lt;/th&gt;
+    &lt;th&gt;Price&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Apple&lt;/td&gt;
+    &lt;td&gt;$1.00&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</pre>
+        </div>
+    </div>
+
+    <a href="html_tables_practice.html" class="btn-practice">
+        <i class="fa-solid fa-laptop-code"></i> View My Practice Work
+    </a>
+</div>
+
+</body>
+</html>
